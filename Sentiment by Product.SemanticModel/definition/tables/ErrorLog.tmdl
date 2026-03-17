@@ -1,0 +1,106 @@
+table ErrorLog
+	lineageTag: f3226fdc-e3c0-4918-b569-a2f4c603d295
+	sourceLineageTag: aa97d2d5-0256-4503-ba9d-80bd75ed79a1
+
+	column ErrorLogID
+		dataType: int64
+		formatString: 0
+		lineageTag: 74bce043-0f4a-44ba-b3ed-4569baa9d2c2
+		sourceLineageTag: baad7fad-ba30-423f-93f7-7b75bdd672fb
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: ErrorLogID
+
+		annotation SummarizationSetBy = User
+
+	column ErrorTime
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 238401e7-fb8b-4d03-a450-7a1c0795946b
+		sourceLineageTag: c02dfc91-50d5-4c34-adc1-6c09624e10ee
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ErrorTime
+
+		annotation SummarizationSetBy = User
+
+	column UserName
+		dataType: string
+		lineageTag: d4357a1d-d1ec-4cb0-b45d-5e66d9df0be9
+		sourceLineageTag: 669ff2b6-f220-44ac-b437-237882a197de
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: UserName
+
+		annotation SummarizationSetBy = User
+
+	column ErrorNumber
+		dataType: int64
+		formatString: 0
+		lineageTag: f2aeaaea-4caa-462b-8484-f1d7ca8094e3
+		sourceLineageTag: 89c49c65-d007-4b17-8c96-c8304d3eac5c
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: ErrorNumber
+
+		annotation SummarizationSetBy = User
+
+	column ErrorSeverity
+		dataType: int64
+		formatString: 0
+		lineageTag: ca0c51b1-c1ae-4732-ad21-ea831782f270
+		sourceLineageTag: 54deb8f8-e6a7-4ca5-92c0-3ede5736377a
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: ErrorSeverity
+
+		annotation SummarizationSetBy = User
+
+	column ErrorState
+		dataType: int64
+		formatString: 0
+		lineageTag: bac6e262-59f7-4064-a495-e943c90d39bb
+		sourceLineageTag: c8b0c886-9e54-4a8e-ac1a-599c2e9650f1
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: ErrorState
+
+		annotation SummarizationSetBy = User
+
+	column ErrorProcedure
+		dataType: string
+		lineageTag: d2bd490d-963f-4128-9c9a-74887ac9515c
+		sourceLineageTag: 131f344f-299d-448b-b29b-60bb261b1bbc
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ErrorProcedure
+
+		annotation SummarizationSetBy = User
+
+	column ErrorLine
+		dataType: int64
+		formatString: 0
+		lineageTag: 44a6f4dd-0b1c-425d-95b4-786256a9288f
+		sourceLineageTag: 08eb71cc-080d-43f9-a5d1-632018a33f35
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: ErrorLine
+
+		annotation SummarizationSetBy = User
+
+	column ErrorMessage
+		dataType: string
+		lineageTag: 363c1bdf-0631-4c69-a5ed-f0790d0d83a3
+		sourceLineageTag: 816a333f-8855-40d6-8afc-d6b1dc3537a7
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ErrorMessage
+
+		annotation SummarizationSetBy = User
+
+	partition ErrorLog = entity
+		mode: directQuery
+		source
+			entityName: ErrorLog
+			expressionSource: 'DirectQuery to AS - product_insight'
+

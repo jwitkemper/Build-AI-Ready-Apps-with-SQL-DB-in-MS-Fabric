@@ -1,0 +1,53 @@
+table BuildVersion
+	lineageTag: 884cd3d4-cf9d-4677-a0ec-bb7a2a695211
+	sourceLineageTag: 2e8c9768-fb45-4e36-b2c7-1faf75ea2665
+
+	column SystemInformationID
+		dataType: int64
+		formatString: 0
+		lineageTag: 7d5f0447-24d8-4292-b845-1e0320095cc8
+		sourceLineageTag: 9695f61e-e139-48b4-8cf9-c02f76f41a24
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: SystemInformationID
+
+		annotation SummarizationSetBy = User
+
+	column DatabaseVersion
+		dataType: string
+		lineageTag: d3d11d25-834d-4688-a063-7b3978bb5868
+		sourceLineageTag: a355a6f3-5ae8-4a82-9920-77daba5ae6bf
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: DatabaseVersion
+
+		annotation SummarizationSetBy = User
+
+	column VersionDate
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 8c82f95f-40dc-4a7d-9b99-393add48a1e1
+		sourceLineageTag: 10217461-d503-4685-9e1d-5a4c9c8ca38a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: VersionDate
+
+		annotation SummarizationSetBy = User
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 9ce6fa04-8063-46e9-b2f0-3e7774396643
+		sourceLineageTag: edff7abe-2bea-47fd-9b0f-0d94988af578
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		annotation SummarizationSetBy = User
+
+	partition BuildVersion = entity
+		mode: directQuery
+		source
+			entityName: BuildVersion
+			expressionSource: 'DirectQuery to AS - product_insight'
+

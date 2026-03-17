@@ -1,0 +1,102 @@
+{
+  "config": "{\"version\":\"5.70\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY26SU02\",\"version\":{\"visual\":\"2.6.0\",\"report\":\"3.1.0\",\"page\":\"2.3.0\"},\"type\":2},\"customTheme\":{\"name\":\"Copilot_Theme6776206449901162.json\",\"version\":{\"visual\":\"2.7.0\",\"report\":\"3.2.0\",\"page\":\"2.3.1\"},\"type\":1}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "Copilot_Theme6776206449901162.json",
+            "path": "Copilot_Theme6776206449901162.json",
+            "type": 201
+          }
+        ],
+        "name": "RegisteredResources",
+        "type": 1
+      }
+    },
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY26SU02",
+            "path": "BaseThemes/CY26SU02.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{\"objects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#FFFFFF'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"60L\"}}}}}]}}",
+      "displayName": "Supplier Performance Analysis",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "1e0bbceb7d4101a20a0a",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"01616cdad20da6950d9d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1068,\"y\":0,\"z\":2,\"width\":212,\"height\":72}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Suppliers.SupplierName\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"Suppliers\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"SupplierName\"},\"Name\":\"Suppliers.SupplierName\",\"NativeReferenceName\":\"SupplierName\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"header\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'Segoe UI'\"}}},\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"9L\"}}}}}],\"selection\":[{\"properties\":{\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#A6ADC6'\"}}}}},\"preset\":{\"expr\":{\"Literal\":{\"Value\":\"'Custom'\"}}},\"shadowSpread\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}},\"shadowBlur\":{\"expr\":{\"Literal\":{\"Value\":\"5L\"}}},\"angle\":{\"expr\":{\"Literal\":{\"Value\":\"90L\"}}},\"shadowDistance\":{\"expr\":{\"Literal\":{\"Value\":\"4L\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"85L\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#E0E0E0'\"}}}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"4L\"}}}}}]}},\"howCreated\":\"Copilot\"}",
+          "filters": "[]",
+          "height": 72.00,
+          "width": 212.00,
+          "x": 1068.00,
+          "y": 0.00,
+          "z": 2.00
+        },
+        {
+          "config": "{\"name\":\"14eeece528ecb9743330\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":1,\"width\":1280,\"height\":80}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"fill\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"outline\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#A6ADC6'\"}}}}},\"preset\":{\"expr\":{\"Literal\":{\"Value\":\"'Custom'\"}}},\"shadowSpread\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}},\"shadowBlur\":{\"expr\":{\"Literal\":{\"Value\":\"5L\"}}},\"angle\":{\"expr\":{\"Literal\":{\"Value\":\"90L\"}}},\"shadowDistance\":{\"expr\":{\"Literal\":{\"Value\":\"4L\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"85L\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"50L\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#E0E0E0'\"}}}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"4L\"}}}}}]}},\"howCreated\":\"Copilot\"}",
+          "filters": "[]",
+          "height": 80.00,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 1.00
+        },
+        {
+          "config": "{\"name\":\"53b142b9c067ea3e7050\",\"layouts\":[{\"id\":0,\"position\":{\"x\":40,\"y\":100,\"z\":1,\"width\":595,\"height\":112}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Avg(SupplierPerformance.OnTimeDeliveryRate)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"SupplierPerformance\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"OnTimeDeliveryRate\"}},\"Function\":1},\"Name\":\"Avg(SupplierPerformance.OnTimeDeliveryRate)\",\"NativeReferenceName\":\"Average of OnTimeDeliveryRate\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"OnTimeDeliveryRate\"}},\"Function\":1}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"accentBar\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#118DFF'\"}}}}}},\"selector\":{\"metadata\":\"Avg(SupplierPerformance.OnTimeDeliveryRate)\"}}],\"outline\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"layout\":[{\"properties\":{\"maxTiles\":{\"expr\":{\"Literal\":{\"Value\":\"10L\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Average On-Time Delivery Rate'\"}}}}}]}},\"howCreated\":\"Copilot\"}",
+          "filters": "[]",
+          "height": 112.00,
+          "width": 595.00,
+          "x": 40.00,
+          "y": 100.00,
+          "z": 1.00
+        },
+        {
+          "config": "{\"name\":\"5409136e8a00b4a60151\",\"layouts\":[{\"id\":0,\"position\":{\"x\":645,\"y\":100,\"z\":1,\"width\":595,\"height\":112}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Avg(SupplierPerformance.QualityScore)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"SupplierPerformance\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"QualityScore\"}},\"Function\":1},\"Name\":\"Avg(SupplierPerformance.QualityScore)\",\"NativeReferenceName\":\"Average of QualityScore\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"QualityScore\"}},\"Function\":1}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"accentBar\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#118DFF'\"}}}}}},\"selector\":{\"metadata\":\"Avg(SupplierPerformance.QualityScore)\"}}],\"outline\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"layout\":[{\"properties\":{\"maxTiles\":{\"expr\":{\"Literal\":{\"Value\":\"10L\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Average Quality Score (All Suppliers)'\"}}}}}]}},\"howCreated\":\"Copilot\"}",
+          "filters": "[]",
+          "height": 112.00,
+          "width": 595.00,
+          "x": 645.00,
+          "y": 100.00,
+          "z": 1.00
+        },
+        {
+          "config": "{\"name\":\"5d96b5dc45aad1001330\",\"layouts\":[{\"id\":0,\"position\":{\"x\":40,\"y\":20,\"z\":2,\"width\":620,\"height\":40}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Supplier Performance Analysis\",\"textStyle\":{\"fontFamily\":\"Segoe UI\",\"fontSize\":\"14pt\",\"fontWeight\":\"bold\"}}],\"horizontalTextAlignment\":\"left\"}]}}]},\"vcObjects\":{}},\"howCreated\":\"Copilot\"}",
+          "filters": "[]",
+          "height": 40.00,
+          "width": 620.00,
+          "x": 40.00,
+          "y": 20.00,
+          "z": 2.00
+        },
+        {
+          "config": "{\"name\":\"d4c787f6486899077994\",\"layouts\":[{\"id\":0,\"position\":{\"x\":645,\"y\":456,\"z\":1,\"width\":595,\"height\":224}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"SupplierPerformance.EvaluationDate\"}],\"Y\":[{\"queryRef\":\"Avg(SupplierPerformance.OnTimeDeliveryRate)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"SupplierPerformance\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"EvaluationDate\"},\"Name\":\"SupplierPerformance.EvaluationDate\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"OnTimeDeliveryRate\"}},\"Function\":1},\"Name\":\"Avg(SupplierPerformance.OnTimeDeliveryRate)\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"EvaluationDate\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"valueAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#A6ADC6'\"}}}}},\"preset\":{\"expr\":{\"Literal\":{\"Value\":\"'Custom'\"}}},\"shadowSpread\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}},\"shadowBlur\":{\"expr\":{\"Literal\":{\"Value\":\"5L\"}}},\"angle\":{\"expr\":{\"Literal\":{\"Value\":\"90L\"}}},\"shadowDistance\":{\"expr\":{\"Literal\":{\"Value\":\"4L\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"85L\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#E0E0E0'\"}}}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"4L\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Average of OnTimeDeliveryRate by EvaluationDate'\"}}}}}]}},\"howCreated\":\"Copilot\"}",
+          "filters": "[]",
+          "height": 224.00,
+          "width": 595.00,
+          "x": 645.00,
+          "y": 456.00,
+          "z": 1.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ],
+  "theme": "Copilot_Theme6776206449901162.json"
+}

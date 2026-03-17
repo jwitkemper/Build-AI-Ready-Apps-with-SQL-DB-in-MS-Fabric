@@ -1,0 +1,163 @@
+table Customer
+	lineageTag: a3bd33c4-ed5e-4c5f-b5c0-9a793fc98d83
+	sourceLineageTag: 563ea8cb-5356-471c-a48d-435a199364da
+
+	column CustomerID
+		dataType: int64
+		formatString: 0
+		lineageTag: 04d751b5-37ca-4c72-890c-9191fe77e00a
+		sourceLineageTag: 6758b75f-6bf4-4707-97a6-ec50293833c8
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: CustomerID
+
+		annotation SummarizationSetBy = User
+
+	column NameStyle
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 8022bd81-0696-43a6-9a0e-03a5a0d26cf8
+		sourceLineageTag: f91286b1-1109-47f1-8db8-58cfb04e7484
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: NameStyle
+
+		annotation SummarizationSetBy = User
+
+	column Title
+		dataType: string
+		lineageTag: 378472b9-2ae9-4e2c-9bdd-89381ae11bc2
+		sourceLineageTag: 933c89a6-62e4-4560-b900-a25fcc38792e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Title
+
+		annotation SummarizationSetBy = User
+
+	column FirstName
+		dataType: string
+		lineageTag: 3cbc0dfb-2b46-4fd5-a96f-25fdd92bf064
+		sourceLineageTag: 9590f0bf-7632-48d0-81d0-39cb5a2fdf50
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: FirstName
+
+		annotation SummarizationSetBy = User
+
+	column MiddleName
+		dataType: string
+		lineageTag: eafcae38-0347-483e-a372-5332f0156a67
+		sourceLineageTag: b8763500-636a-499c-a9d4-74a4444323b8
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: MiddleName
+
+		annotation SummarizationSetBy = User
+
+	column LastName
+		dataType: string
+		lineageTag: 22b7cb21-9455-4768-ab1f-59fc1718390c
+		sourceLineageTag: 1755abc9-c1ac-4c82-a956-d4a936af17f6
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: LastName
+
+		annotation SummarizationSetBy = User
+
+	column Suffix
+		dataType: string
+		lineageTag: 96893416-a4e4-47a5-b745-422d66b7f09a
+		sourceLineageTag: 53992edd-5689-4e66-a217-31283bf63f8d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Suffix
+
+		annotation SummarizationSetBy = User
+
+	column CompanyName
+		dataType: string
+		lineageTag: 63f9e030-1644-4c03-8750-7c341763d377
+		sourceLineageTag: 4b8d6e82-84b3-4017-ba63-08086ea38f9d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: CompanyName
+
+		annotation SummarizationSetBy = User
+
+	column SalesPerson
+		dataType: string
+		lineageTag: 78692554-07e6-40c2-853e-99d4eb5663a1
+		sourceLineageTag: 70d25054-5f74-47e9-a438-1d7f1e36c30f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: SalesPerson
+
+		annotation SummarizationSetBy = User
+
+	column EmailAddress
+		dataType: string
+		lineageTag: aebb38b9-55c0-42f9-a92d-32f98e0c4239
+		sourceLineageTag: 97313058-736a-41e1-bbd6-c4ed045f6600
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: EmailAddress
+
+		annotation SummarizationSetBy = User
+
+	column Phone
+		dataType: string
+		lineageTag: e46d98c1-0265-4132-ac9e-9254c0e2b494
+		sourceLineageTag: fe57580f-ccdf-454b-901a-da194c089566
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Phone
+
+		annotation SummarizationSetBy = User
+
+	column PasswordHash
+		dataType: string
+		lineageTag: ce3a0f7c-9db0-40aa-8e2a-b7fca9599ef5
+		sourceLineageTag: 6935b1e8-a5f1-401b-b29f-0744924ca708
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: PasswordHash
+
+		annotation SummarizationSetBy = User
+
+	column PasswordSalt
+		dataType: string
+		lineageTag: 3de627ab-3639-4193-93cc-8b1737a092f0
+		sourceLineageTag: 202babc1-4e43-4d75-a5b9-4464e889d6da
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: PasswordSalt
+
+		annotation SummarizationSetBy = User
+
+	column rowguid
+		dataType: string
+		lineageTag: c0acfc50-7d5e-4b8b-9c9e-2b7d9ba39975
+		sourceLineageTag: 455ffbee-05e9-4e9b-92fe-7ec51793c525
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: rowguid
+
+		annotation SummarizationSetBy = User
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 9901ee6a-c2fd-4e31-883b-86bf13e4b5b8
+		sourceLineageTag: 2698e336-77cb-43da-b8f0-83a891f3e62e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		annotation SummarizationSetBy = User
+
+	partition Customer = entity
+		mode: directQuery
+		source
+			entityName: Customer
+			expressionSource: 'DirectQuery to AS - product_insight'
+

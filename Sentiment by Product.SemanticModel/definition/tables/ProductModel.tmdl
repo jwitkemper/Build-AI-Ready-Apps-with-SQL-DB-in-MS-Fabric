@@ -1,0 +1,52 @@
+table ProductModel
+	lineageTag: df073369-305a-4487-ae1e-72dc0181e08b
+	sourceLineageTag: 8d7ce085-9a12-49bb-a493-da221d6b1fac
+
+	column ProductModelID
+		dataType: int64
+		formatString: 0
+		lineageTag: 7a2e878a-c30a-4e7f-8e3b-1277688da7d4
+		sourceLineageTag: 35c1bf13-f828-49da-aacc-62da06bed94f
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: ProductModelID
+
+		annotation SummarizationSetBy = User
+
+	column Name
+		dataType: string
+		lineageTag: 4ba28837-d932-4be9-aa1d-5dc8c10f85b2
+		sourceLineageTag: d07dd91d-a7e7-460a-a767-ee46ddb33ded
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = User
+
+	column rowguid
+		dataType: string
+		lineageTag: c313c5d7-7b75-4c64-bdc8-d2e4d5f4c368
+		sourceLineageTag: bea71d44-800d-43b8-af44-95b726b6b1a3
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: rowguid
+
+		annotation SummarizationSetBy = User
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: c9b7b17f-60ac-4e5c-a429-847b9c392724
+		sourceLineageTag: fa4bfdbd-4d08-493d-900e-d8030540bb57
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		annotation SummarizationSetBy = User
+
+	partition ProductModel = entity
+		mode: directQuery
+		source
+			entityName: ProductModel
+			expressionSource: 'DirectQuery to AS - product_insight'
+

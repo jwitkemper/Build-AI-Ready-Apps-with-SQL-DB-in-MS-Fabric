@@ -1,0 +1,192 @@
+table Product
+	lineageTag: e785b7b8-dc5b-45f7-b26c-fc1b07518d2d
+	sourceLineageTag: f1f338a4-9786-4383-aa93-bef7cd3c2882
+
+	column ProductID
+		dataType: int64
+		formatString: 0
+		lineageTag: f69444ba-7db2-4190-9c45-b079a176bca1
+		sourceLineageTag: 1b1f7877-8aec-4eb4-9475-d5afa44efb3d
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: ProductID
+
+		annotation SummarizationSetBy = User
+
+	column Name
+		dataType: string
+		lineageTag: 7ffb50af-232e-49a0-b2ac-b4f9c490f346
+		sourceLineageTag: d25fe355-d211-40fc-b0cb-68f988379341
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = User
+
+	column ProductNumber
+		dataType: string
+		lineageTag: 457db812-ec2c-49dc-aa8b-47e7c2cbb602
+		sourceLineageTag: a1559065-13e1-4287-8bfa-a6dbc6e01688
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ProductNumber
+
+		annotation SummarizationSetBy = User
+
+	column Color
+		dataType: string
+		lineageTag: 7739d81b-bcf8-4fd6-86d2-0f3e144743cc
+		sourceLineageTag: c35fd4f2-97b1-4914-a5f7-ed65a4937dfc
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Color
+
+		annotation SummarizationSetBy = User
+
+	column StandardCost
+		dataType: double
+		lineageTag: 3a2fb79b-58c3-4b70-a4b8-77e985925d9e
+		sourceLineageTag: bcc2afa9-7313-4054-be99-b361c0dadc76
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: StandardCost
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ListPrice
+		dataType: double
+		lineageTag: 7b446b35-7fe8-45d8-a3d6-eabf98309bd8
+		sourceLineageTag: e03e15d6-2241-44b9-866b-a2c89e36165e
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: ListPrice
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Size
+		dataType: string
+		lineageTag: 53a08fdb-2823-4c81-ac33-6d6cfab1937b
+		sourceLineageTag: 43977a6b-20aa-4b8d-a868-335569f594dc
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Size
+
+		annotation SummarizationSetBy = User
+
+	column Weight
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 60a14a1c-d55a-4ecf-9fdf-878942547394
+		sourceLineageTag: 5b77721c-b5e8-4274-adda-6a32ade2300d
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Weight
+
+		annotation SummarizationSetBy = User
+
+	column ProductCategoryID
+		dataType: int64
+		formatString: 0
+		lineageTag: ad80473f-b003-4570-9cab-4a380e154900
+		sourceLineageTag: 4464a7df-6707-4a7f-9b10-e40b3b080a73
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: ProductCategoryID
+
+		annotation SummarizationSetBy = User
+
+	column ProductModelID
+		dataType: int64
+		formatString: 0
+		lineageTag: fa889514-d2d0-4f4a-81c4-76e229f2fd52
+		sourceLineageTag: 88fe3733-aa24-4ad0-887f-b0890dfcb8a0
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: ProductModelID
+
+		annotation SummarizationSetBy = User
+
+	column SellStartDate
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 25436374-bb28-4a02-a1f1-2b347e3bebca
+		sourceLineageTag: c9ec6c21-081d-4bd9-a24c-3d81491e9cf0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: SellStartDate
+
+		annotation SummarizationSetBy = User
+
+	column SellEndDate
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 0cb130da-b288-4ba3-8ffc-3a1ad12e8348
+		sourceLineageTag: b63dc0f9-fb3d-4cf9-b6e7-0f115dba8ca2
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: SellEndDate
+
+		annotation SummarizationSetBy = User
+
+	column DiscontinuedDate
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 234ba026-7a2a-4c5f-badd-354df1b520e0
+		sourceLineageTag: 70d062d7-c4d2-4aa4-84cf-75bd658b0665
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: DiscontinuedDate
+
+		annotation SummarizationSetBy = User
+
+	column ThumbnailPhotoFileName
+		dataType: string
+		lineageTag: 0b38a2ca-368f-46f3-a76a-d6c2090ad5c9
+		sourceLineageTag: a346b9c5-24bb-4f30-b855-b7de4a5fadde
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ThumbnailPhotoFileName
+
+		annotation SummarizationSetBy = User
+
+	column rowguid
+		dataType: string
+		lineageTag: 9658abb3-897f-4b81-9780-9577cc180924
+		sourceLineageTag: 21631073-4fc5-4e6d-b53f-9f9466d1fa80
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: rowguid
+
+		annotation SummarizationSetBy = User
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 78f10548-0622-4342-a34e-33d81b27fcaa
+		sourceLineageTag: 846f98b0-81f1-4525-afbf-16746247dbce
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		annotation SummarizationSetBy = User
+
+	column chunk
+		dataType: string
+		lineageTag: b9104805-48c1-4c84-9736-db4ddc439d32
+		sourceLineageTag: d51de1a2-dbcc-488d-b507-e456f1513d67
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: chunk
+
+		annotation SummarizationSetBy = User
+
+	partition Product = entity
+		mode: directQuery
+		source
+			entityName: Product
+			expressionSource: 'DirectQuery to AS - product_insight'
+

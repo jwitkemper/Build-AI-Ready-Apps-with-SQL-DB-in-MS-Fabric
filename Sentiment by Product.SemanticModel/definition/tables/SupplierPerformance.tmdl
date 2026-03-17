@@ -1,0 +1,97 @@
+table SupplierPerformance
+	lineageTag: 706e30b3-3b24-4d54-8bc8-024f0fabd3a8
+	sourceLineageTag: c3701c8c-61c2-4773-abae-b5f5d7922dff
+
+	column SupplierPerformanceID
+		dataType: int64
+		formatString: 0
+		lineageTag: c24ea77b-ed14-4615-8cb3-5b0e40de9436
+		sourceLineageTag: cee27dc2-b197-4f02-a29c-63b42b90e780
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: SupplierPerformanceID
+
+		annotation SummarizationSetBy = User
+
+	column SupplierID
+		dataType: int64
+		formatString: 0
+		lineageTag: 2f668045-37d6-43af-b8ad-fe79285a27ce
+		sourceLineageTag: aae1435e-63ad-41a2-b526-c954ae34225a
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: SupplierID
+
+		annotation SummarizationSetBy = User
+
+	column EvaluationDate
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 2dc2ff9c-671d-4aa4-8830-bd385ae35b7c
+		sourceLineageTag: aa77f399-8945-4d59-a627-60a4d59f71a7
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: EvaluationDate
+
+		annotation SummarizationSetBy = User
+
+	column OnTimeDeliveryRate
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 25d01a8c-bb61-4e1a-9432-f11f6a553f01
+		sourceLineageTag: 12b0726d-5c86-49aa-933b-a52040fc7bb4
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: OnTimeDeliveryRate
+
+		annotation SummarizationSetBy = User
+
+	column QualityScore
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: ef2a47c8-f68c-411b-8e73-6b4fc0b49631
+		sourceLineageTag: 7c334e45-6fe9-49bb-8782-a44f0b11955a
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: QualityScore
+
+		annotation SummarizationSetBy = User
+
+	column AverageLeadTimeDays
+		dataType: int64
+		formatString: 0
+		lineageTag: 73c0532b-2021-40f5-aed2-a633f17b4f99
+		sourceLineageTag: 1d2113b4-c1c4-4d8a-ac76-7c6afac69d84
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: AverageLeadTimeDays
+
+		annotation SummarizationSetBy = User
+
+	column RiskScore
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 6fbbc792-f7f0-475b-817d-2e31d556f6d5
+		sourceLineageTag: 7ec79a8c-638b-4b35-9eb8-f70ccbff8b35
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: RiskScore
+
+		annotation SummarizationSetBy = User
+
+	column AIInsight
+		dataType: string
+		lineageTag: 760544f1-5110-4717-ad86-3048fbb3e663
+		sourceLineageTag: 4522d26d-d49c-43bc-8117-c31c8a3e4cc7
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: AIInsight
+
+		annotation SummarizationSetBy = User
+
+	partition SupplierPerformance = entity
+		mode: directQuery
+		source
+			entityName: SupplierPerformance
+			expressionSource: 'DirectQuery to AS - product_insight'
+

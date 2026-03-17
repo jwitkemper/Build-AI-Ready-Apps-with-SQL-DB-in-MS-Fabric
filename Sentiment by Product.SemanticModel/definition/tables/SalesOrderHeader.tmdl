@@ -1,0 +1,227 @@
+table SalesOrderHeader
+	lineageTag: d3484d46-3e63-4ed2-92ca-8fdd46c239da
+	sourceLineageTag: 058f5e95-9da5-4a8e-bb5b-fcc563814a94
+
+	column SalesOrderID
+		dataType: int64
+		formatString: 0
+		lineageTag: a6c1c396-f1e7-4446-a672-4b0d39003702
+		sourceLineageTag: a5d7e26a-1d58-4300-8504-eded853d9a6c
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: SalesOrderID
+
+		annotation SummarizationSetBy = User
+
+	column RevisionNumber
+		dataType: int64
+		formatString: 0
+		lineageTag: 984e81fc-4d70-4a6d-b022-4e3af4dee95d
+		sourceLineageTag: 10e6fccd-702c-4d86-9a5d-aa7078d572b1
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: RevisionNumber
+
+		annotation SummarizationSetBy = User
+
+	column OrderDate
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: d8c1d384-1ef8-4de7-b25f-ab9d8ef57135
+		sourceLineageTag: 712cd958-a658-48c8-8dad-f9fc48fd3d2a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: OrderDate
+
+		annotation SummarizationSetBy = User
+
+	column DueDate
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 6aeda7a3-ef64-4fc8-a313-045825d99353
+		sourceLineageTag: debbba38-4038-4ef2-bb02-42dea4e21281
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: DueDate
+
+		annotation SummarizationSetBy = User
+
+	column ShipDate
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 65544687-936c-453c-bbc4-68bf72074000
+		sourceLineageTag: 26b1f0d2-fc5f-4f58-a72d-b40d1bd28077
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ShipDate
+
+		annotation SummarizationSetBy = User
+
+	column Status
+		dataType: int64
+		formatString: 0
+		lineageTag: d2d440a5-c583-4070-b06c-5f952d55c83c
+		sourceLineageTag: 9d3f4d8c-85cf-4874-bef9-b4028ebc52ff
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = User
+
+	column OnlineOrderFlag
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: e51d47bf-962e-4a21-bbf6-12211659fd00
+		sourceLineageTag: 20bfa898-da18-4d6d-b72c-8c795fef0e3a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: OnlineOrderFlag
+
+		annotation SummarizationSetBy = User
+
+	column PurchaseOrderNumber
+		dataType: string
+		lineageTag: a63673d1-da08-4832-a549-3f3da4519d0e
+		sourceLineageTag: e2a0ee1a-fbe1-4d4b-bb1e-498d109f9426
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: PurchaseOrderNumber
+
+		annotation SummarizationSetBy = User
+
+	column AccountNumber
+		dataType: string
+		lineageTag: 139bb233-c57c-4f00-85af-a019ebc0736d
+		sourceLineageTag: 90ac9e09-4f05-45c5-91eb-612eb90dcc3d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: AccountNumber
+
+		annotation SummarizationSetBy = User
+
+	column CustomerID
+		dataType: int64
+		formatString: 0
+		lineageTag: fd0a4458-666b-4745-90a9-4d02e845964b
+		sourceLineageTag: 45a3ab96-0ca5-48f1-9f82-9d974c39d953
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: CustomerID
+
+		annotation SummarizationSetBy = User
+
+	column ShipToAddressID
+		dataType: int64
+		formatString: 0
+		lineageTag: 286e3c62-28de-4e93-85ba-001eb23b3bc5
+		sourceLineageTag: 36c8163b-5011-4209-aad7-a1f6b9e46498
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: ShipToAddressID
+
+		annotation SummarizationSetBy = User
+
+	column BillToAddressID
+		dataType: int64
+		formatString: 0
+		lineageTag: 322e6fcc-ac52-48eb-b351-850d4930a140
+		sourceLineageTag: 1cdc3f18-26db-445a-821c-f581091f84aa
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: BillToAddressID
+
+		annotation SummarizationSetBy = User
+
+	column ShipMethod
+		dataType: string
+		lineageTag: 1f3ecce2-eebf-4a72-b96e-bc9e38990f87
+		sourceLineageTag: ca643b09-78f4-4329-b42d-cb28e309ed80
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ShipMethod
+
+		annotation SummarizationSetBy = User
+
+	column CreditCardApprovalCode
+		dataType: string
+		lineageTag: 8f9dc397-f5b8-46b0-92a0-e2b3f3c1558e
+		sourceLineageTag: 0fb5fd75-1c2e-4f7d-8ae6-91bb05df14ad
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: CreditCardApprovalCode
+
+		annotation SummarizationSetBy = User
+
+	column SubTotal
+		dataType: double
+		lineageTag: c8bcedfb-aab2-42ee-80aa-9f1f98dba809
+		sourceLineageTag: cda9db5b-22f1-4f63-82ff-594ed585a5ed
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: SubTotal
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TaxAmt
+		dataType: double
+		lineageTag: 5544cff2-4a3b-4a89-a480-db5873645fe0
+		sourceLineageTag: 8e41c4cd-cd6f-4a83-916f-06ec3d9c95c2
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: TaxAmt
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Freight
+		dataType: double
+		lineageTag: 9f7f2cab-9634-4d00-b17d-626d4695c3b1
+		sourceLineageTag: e400ccec-e05c-4500-9876-f2267b0c49de
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Freight
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Comment
+		dataType: string
+		lineageTag: 9877daa5-cbcf-46ad-83ba-e364698fafb7
+		sourceLineageTag: dc759713-9a25-46d1-ae60-e6599ac5b08a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Comment
+
+		annotation SummarizationSetBy = User
+
+	column rowguid
+		dataType: string
+		lineageTag: a63df43f-d95c-489a-b118-767ce190f712
+		sourceLineageTag: e4d11d65-822e-4497-8960-6e14819e5874
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: rowguid
+
+		annotation SummarizationSetBy = User
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 44c9ea43-8a73-45ea-b714-d784c45bd4b0
+		sourceLineageTag: c21a612f-fdd8-482e-8901-a3c45f531607
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		annotation SummarizationSetBy = User
+
+	partition SalesOrderHeader = entity
+		mode: directQuery
+		source
+			entityName: SalesOrderHeader
+			expressionSource: 'DirectQuery to AS - product_insight'
+

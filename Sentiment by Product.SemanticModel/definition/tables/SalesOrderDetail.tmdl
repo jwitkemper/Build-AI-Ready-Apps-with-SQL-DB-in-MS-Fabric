@@ -1,0 +1,99 @@
+table SalesOrderDetail
+	lineageTag: d4cfd4fc-c806-4315-90f3-cd0642170f56
+	sourceLineageTag: 8f8e6648-d0d0-46a4-bdd5-93941eb05228
+
+	column SalesOrderID
+		dataType: int64
+		formatString: 0
+		lineageTag: eb8e6180-cf22-4724-815d-d37d1b339ece
+		sourceLineageTag: d2380f36-5c64-4566-8819-c582aa659a11
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: SalesOrderID
+
+		annotation SummarizationSetBy = User
+
+	column SalesOrderDetailID
+		dataType: int64
+		formatString: 0
+		lineageTag: b370a746-5f03-4193-b092-00713765656f
+		sourceLineageTag: 7d28f640-a626-40d3-a0a4-46268365a889
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: SalesOrderDetailID
+
+		annotation SummarizationSetBy = User
+
+	column OrderQty
+		dataType: int64
+		formatString: 0
+		lineageTag: d181a3a8-5181-4d31-a363-37d65c21e4eb
+		sourceLineageTag: 29cdb41b-6626-407f-8cd9-00bac897a061
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: OrderQty
+
+		annotation SummarizationSetBy = User
+
+	column ProductID
+		dataType: int64
+		formatString: 0
+		lineageTag: d38d1651-172f-4419-bb1a-fbf2b75aa427
+		sourceLineageTag: df92af86-ce88-4400-bc05-ced783b67cb3
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: ProductID
+
+		annotation SummarizationSetBy = User
+
+	column UnitPrice
+		dataType: double
+		lineageTag: 937d9cb8-e20c-4747-8748-8e0c2cc784cf
+		sourceLineageTag: 08449ab9-9d53-407e-bb60-79415a4e6543
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: UnitPrice
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column UnitPriceDiscount
+		dataType: double
+		lineageTag: 640994c4-884f-47bd-8375-784b6cdf7eca
+		sourceLineageTag: f7d014d3-ff55-49aa-971d-bf66bfecccd0
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: UnitPriceDiscount
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column rowguid
+		dataType: string
+		lineageTag: 2fb267e6-1a0f-49da-a116-341f3898bfbe
+		sourceLineageTag: 94b2d5f6-be02-409c-b5c6-8fa9b8e9e4e1
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: rowguid
+
+		annotation SummarizationSetBy = User
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: dcebc8e2-32a7-4121-9edd-91b6d93b60bf
+		sourceLineageTag: ac3a6d00-75fa-4077-86c0-354374ec28cd
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		annotation SummarizationSetBy = User
+
+	partition SalesOrderDetail = entity
+		mode: directQuery
+		source
+			entityName: SalesOrderDetail
+			expressionSource: 'DirectQuery to AS - product_insight'
+

@@ -1,0 +1,68 @@
+table Warehouse
+	lineageTag: 273895cd-7429-4214-a6de-83dfb9f54bc1
+	sourceLineageTag: [SupplyChain].[Warehouse]
+
+	column ProductID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: e5f9721f-8967-4a3f-8694-fb18dec7b65c
+		sourceLineageTag: ProductID
+		summarizeBy: count
+		sourceColumn: ProductID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ComponentID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 948d3be9-2b3c-491f-92ae-5f7b02a92f10
+		sourceLineageTag: ComponentID
+		summarizeBy: count
+		sourceColumn: ComponentID
+
+		annotation SummarizationSetBy = Automatic
+
+	column SupplierID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: b2359b16-fc08-4ada-8a21-5c32afd3eaab
+		sourceLineageTag: SupplierID
+		summarizeBy: count
+		sourceColumn: SupplierID
+
+		annotation SummarizationSetBy = Automatic
+
+	column SupplierLocationID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 2f92b5a0-299a-4902-ae46-986bb57bfd5a
+		sourceLineageTag: SupplierLocationID
+		summarizeBy: count
+		sourceColumn: SupplierLocationID
+
+		annotation SummarizationSetBy = Automatic
+
+	column QuantityOnHand
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: d60cc3f0-7f9f-4004-8e70-f950d43deab7
+		sourceLineageTag: QuantityOnHand
+		summarizeBy: sum
+		sourceColumn: QuantityOnHand
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Warehouse = entity
+		mode: directLake
+		source
+			entityName: Warehouse
+			schemaName: SupplyChain
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

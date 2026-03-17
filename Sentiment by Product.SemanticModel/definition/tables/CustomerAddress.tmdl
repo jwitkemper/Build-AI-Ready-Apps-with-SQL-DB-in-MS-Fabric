@@ -1,0 +1,63 @@
+table CustomerAddress
+	lineageTag: 83ec8c63-9b80-4ac4-9a8c-3cbebccd67f8
+	sourceLineageTag: 331a70f7-8fa7-4c76-b4f9-b992d19f0284
+
+	column CustomerID
+		dataType: int64
+		formatString: 0
+		lineageTag: 1d94279a-8885-48b1-b02f-68d70eb4b53d
+		sourceLineageTag: 273d752d-eb2f-4ea3-91bd-28236e5bfde5
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: CustomerID
+
+		annotation SummarizationSetBy = User
+
+	column AddressID
+		dataType: int64
+		formatString: 0
+		lineageTag: 20afbbc7-bd22-4283-9d15-b7fdc02d7941
+		sourceLineageTag: d0f1bfbf-d71e-407f-b6ec-dd97ed3d3791
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: AddressID
+
+		annotation SummarizationSetBy = User
+
+	column AddressType
+		dataType: string
+		lineageTag: a7528c33-2477-4b4e-87c7-d093073f3a91
+		sourceLineageTag: b72713da-ce2b-4512-9ef9-2766074b3b8d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: AddressType
+
+		annotation SummarizationSetBy = User
+
+	column rowguid
+		dataType: string
+		lineageTag: 76b700ec-a6fd-4be7-97aa-d2aa92923a6f
+		sourceLineageTag: 8363660d-eb16-40f4-9c05-9a4c1b8f015a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: rowguid
+
+		annotation SummarizationSetBy = User
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 205b9a05-6a82-4f18-961f-13d683c82e7a
+		sourceLineageTag: 7be24a57-61e7-4224-be1d-8add94d0c236
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		annotation SummarizationSetBy = User
+
+	partition CustomerAddress = entity
+		mode: directQuery
+		source
+			entityName: CustomerAddress
+			expressionSource: 'DirectQuery to AS - product_insight'
+

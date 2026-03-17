@@ -1,0 +1,66 @@
+table PurchaseOrderLines
+	lineageTag: 709eb8fa-0ab8-4168-a41f-2b62cce029b6
+	sourceLineageTag: 91fb689f-ab2b-4004-8556-abd2eb571e7e
+
+	column PurchaseOrderLineID
+		dataType: int64
+		formatString: 0
+		lineageTag: f879d9b8-2d71-4db2-b3fa-e5cc5bfb6ede
+		sourceLineageTag: 8e0334f0-e091-4b6b-8699-c97fca7d882c
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: PurchaseOrderLineID
+
+		annotation SummarizationSetBy = User
+
+	column PurchaseOrderID
+		dataType: int64
+		formatString: 0
+		lineageTag: 097221f5-9a9c-4101-9748-2a971076d270
+		sourceLineageTag: 777ca64b-d52c-4806-9620-037cb80beeaf
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: PurchaseOrderID
+
+		annotation SummarizationSetBy = User
+
+	column ProductID
+		dataType: int64
+		formatString: 0
+		lineageTag: 078fa16b-0676-44be-ba20-f70b6a16f5cf
+		sourceLineageTag: 02ceec5c-9c87-44d9-87ca-034870ac7475
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: ProductID
+
+		annotation SummarizationSetBy = User
+
+	column OrderedQuantity
+		dataType: int64
+		formatString: 0
+		lineageTag: cb8ebd63-9e24-4085-a8ff-45ffbfe6aab7
+		sourceLineageTag: ac95576b-2068-406b-ad9d-05901fb3774a
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: OrderedQuantity
+
+		annotation SummarizationSetBy = User
+
+	column UnitCost
+		dataType: double
+		lineageTag: be01e7d1-f111-4fa6-a446-ebba7290d735
+		sourceLineageTag: ea9ff431-487a-454a-8bad-2603095ecd2a
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: UnitCost
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition PurchaseOrderLines = entity
+		mode: directQuery
+		source
+			entityName: PurchaseOrderLines
+			expressionSource: 'DirectQuery to AS - product_insight'
+

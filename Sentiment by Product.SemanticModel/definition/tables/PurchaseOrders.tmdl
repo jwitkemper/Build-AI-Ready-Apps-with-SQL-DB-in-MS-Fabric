@@ -1,0 +1,76 @@
+table PurchaseOrders
+	lineageTag: 1d9b315c-8b5b-4288-b22d-41c27f48064b
+	sourceLineageTag: eaf69a69-b1b3-49bf-adbd-ca725a29a454
+
+	column PurchaseOrderID
+		dataType: int64
+		formatString: 0
+		lineageTag: 5610a2cb-f188-4b95-9ac6-571cf40678ad
+		sourceLineageTag: 0ad95a05-58a4-425f-9311-e186563717ce
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: PurchaseOrderID
+
+		annotation SummarizationSetBy = User
+
+	column SupplierID
+		dataType: int64
+		formatString: 0
+		lineageTag: 929fa9d7-1241-4645-a347-8739dd949cef
+		sourceLineageTag: a1a1e20d-60fc-43a8-a370-46a405c611b8
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: SupplierID
+
+		annotation SummarizationSetBy = User
+
+	column OrderDate
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 3efbf431-fcb0-4f22-88be-1e09041d7e7e
+		sourceLineageTag: 01a22379-f4ee-4123-9719-89013ecfeba3
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: OrderDate
+
+		annotation SummarizationSetBy = User
+
+	column ExpectedDeliveryDate
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 04ab4766-047f-40a0-8eb3-71bad350330b
+		sourceLineageTag: 1944cc70-ae31-4e02-a017-057dad50949e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ExpectedDeliveryDate
+
+		annotation SummarizationSetBy = User
+
+	column Status
+		dataType: string
+		lineageTag: 462918b5-4c13-429b-a5ba-4a2b3c2f258e
+		sourceLineageTag: 748805f2-33e5-4563-be0a-38f158df3f5c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = User
+
+	column TotalAmount
+		dataType: double
+		lineageTag: d417e6da-3a80-44d5-802b-ec2767070b8d
+		sourceLineageTag: c6cbc314-67fd-4936-982c-ba1c531087de
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: TotalAmount
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition PurchaseOrders = entity
+		mode: directQuery
+		source
+			entityName: PurchaseOrders
+			expressionSource: 'DirectQuery to AS - product_insight'
+

@@ -1,0 +1,94 @@
+table Suppliers
+	lineageTag: ed28a145-17ca-4321-bb4e-3f1b617ae526
+	sourceLineageTag: bb84b42f-8d9e-470a-aed8-7f371c5a860c
+
+	column SupplierID
+		dataType: int64
+		formatString: 0
+		lineageTag: 9b831e7d-2585-43dd-8594-e900f3938434
+		sourceLineageTag: b4710a99-be98-408d-90fc-0c34a106adfa
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: SupplierID
+
+		annotation SummarizationSetBy = User
+
+	column SupplierName
+		dataType: string
+		lineageTag: c8e198c5-7319-450f-ac0f-097e010bbd72
+		sourceLineageTag: 60be20d5-46d2-4bf8-ac64-27e5d6df5389
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: SupplierName
+
+		annotation SummarizationSetBy = User
+
+	column ContactName
+		dataType: string
+		lineageTag: 684e9fde-cc7e-492a-823b-b37d81deb8e7
+		sourceLineageTag: 5d35f927-94d1-4b2a-b210-cc44ed35b632
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ContactName
+
+		annotation SummarizationSetBy = User
+
+	column Phone
+		dataType: string
+		lineageTag: e60de2e9-ad1c-44b3-b6ed-bc6ae0f5263e
+		sourceLineageTag: 3a198fbf-4da2-4eca-a81b-8355dab56266
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Phone
+
+		annotation SummarizationSetBy = User
+
+	column Email
+		dataType: string
+		lineageTag: a8a5f615-d91b-4329-b9b4-7e0bcd6bb178
+		sourceLineageTag: 670f013b-4c68-446f-ad9c-a2fa0670265b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Email
+
+		annotation SummarizationSetBy = User
+
+	column SupplierLocationID
+		dataType: int64
+		formatString: 0
+		lineageTag: 56d00f58-872d-4197-baca-0a793d508f0d
+		sourceLineageTag: 583b643d-09eb-449e-87da-823eadd9f8c6
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: SupplierLocationID
+
+		annotation SummarizationSetBy = User
+
+	column IsActive
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: f5b69c02-0657-4d2c-b1c3-109f3ea5f80f
+		sourceLineageTag: 36b0ad7a-4424-4918-81a1-4de2d10b9344
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: IsActive
+
+		annotation SummarizationSetBy = User
+
+	column CreatedDate
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 813c356d-90ff-40d4-b625-9f6202d026ff
+		sourceLineageTag: a5850e8c-66d5-425c-8956-09c885b34255
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: CreatedDate
+
+		annotation SummarizationSetBy = User
+
+	partition Suppliers = entity
+		mode: directQuery
+		source
+			entityName: Suppliers
+			expressionSource: 'DirectQuery to AS - product_insight'
+

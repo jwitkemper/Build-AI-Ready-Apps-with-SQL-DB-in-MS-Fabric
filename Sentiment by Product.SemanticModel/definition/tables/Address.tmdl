@@ -1,0 +1,102 @@
+table Address
+	lineageTag: b2183fc7-b461-4247-9780-a12bc61427f6
+	sourceLineageTag: 43792a54-424b-477f-9649-cf41d8aeda8a
+
+	column AddressID
+		dataType: int64
+		formatString: 0
+		lineageTag: 048648a6-f83a-4a91-b491-8c4a5dd1ef81
+		sourceLineageTag: d563fbd2-71b8-4095-b496-dfebfca39c13
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: AddressID
+
+		annotation SummarizationSetBy = User
+
+	column AddressLine1
+		dataType: string
+		lineageTag: f9e36af9-f908-492d-8911-253b7ac6649b
+		sourceLineageTag: bc7e3c45-76cb-4290-aad1-d369c7dfaeef
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: AddressLine1
+
+		annotation SummarizationSetBy = User
+
+	column AddressLine2
+		dataType: string
+		lineageTag: 3eb21c04-f513-425c-b60b-91a986fc9b57
+		sourceLineageTag: bb4796bf-3355-46ec-a726-f97a4afc0490
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: AddressLine2
+
+		annotation SummarizationSetBy = User
+
+	column City
+		dataType: string
+		lineageTag: 18885f53-4b39-4d70-9876-1f1cedb15007
+		sourceLineageTag: 63271d35-6be8-4300-9fa5-ad184ed502b2
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = User
+
+	column StateProvince
+		dataType: string
+		lineageTag: a6343d81-a71f-4eea-b523-a8c733c0ca63
+		sourceLineageTag: d9896d65-596a-4850-8f18-caa4c0c8e0f3
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: StateProvince
+
+		annotation SummarizationSetBy = User
+
+	column CountryRegion
+		dataType: string
+		lineageTag: f5832c26-93f7-439f-b062-0fbe3c784274
+		sourceLineageTag: 2df31258-854e-4aa6-ac00-f46bb4ed26b9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: CountryRegion
+
+		annotation SummarizationSetBy = User
+
+	column PostalCode
+		dataType: string
+		lineageTag: ff45ac35-6629-4a72-98cb-f9da2d474849
+		sourceLineageTag: c915b173-18ce-4194-b12b-918c683c0d6a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: PostalCode
+
+		annotation SummarizationSetBy = User
+
+	column rowguid
+		dataType: string
+		lineageTag: f88b0039-cf65-4f60-9866-616048e7e106
+		sourceLineageTag: 0d8270cd-7919-4029-8d13-8d8c4fe456a0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: rowguid
+
+		annotation SummarizationSetBy = User
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 56b4a061-3fc3-479e-9696-880042a46a06
+		sourceLineageTag: 522f7b5a-57b6-4199-9bcd-633a21bf9bde
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		annotation SummarizationSetBy = User
+
+	partition Address = entity
+		mode: directQuery
+		source
+			entityName: Address
+			expressionSource: 'DirectQuery to AS - product_insight'
+

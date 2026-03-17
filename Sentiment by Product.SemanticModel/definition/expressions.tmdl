@@ -1,0 +1,25 @@
+expression ServerName = "hoccp5nfswhetnwu5cevxgawyy-mwj3rybpjtlebamdaeo43rzkfq.database.fabric.microsoft.com,1433" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 31e7e9d5-1bef-4a98-a265-504306d2239b
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Text
+
+expression DatabaseName = "Fabcon_database-68ff8f41-3d3d-4f29-b282-92537ca11981" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 4073f2f0-905c-4838-9141-09d753641f35
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Text
+
+expression 'DirectQuery to AS - product_insight' =
+		let
+		    Source = AnalysisServices.Database("powerbi://api.powerbi.com/v1.0/myorg/FabricWorkspaceuser265", "product_insight"),
+		    Cubes = Table.Combine(Source[Data]),
+		    Cube = Cubes{[Id="Model", Kind="Cube"]}[Data]
+		in
+		    Cube
+	lineageTag: 3afa92ea-ccce-40f7-9d9f-9e1e9c7c4338
+
+	annotation PBI_IncludeFutureArtifacts = True
+

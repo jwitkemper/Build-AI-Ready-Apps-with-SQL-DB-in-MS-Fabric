@@ -1,0 +1,65 @@
+table Warehouse
+	lineageTag: 498b7eaa-94c2-4eec-bb37-e78eb9838d90
+	sourceLineageTag: 273895cd-7429-4214-a6de-83dfb9f54bc1
+
+	column ProductID
+		dataType: int64
+		formatString: 0
+		lineageTag: f6d56a99-a8bc-410e-a7b0-c3288e25bfe5
+		sourceLineageTag: e5f9721f-8967-4a3f-8694-fb18dec7b65c
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: ProductID
+
+		annotation SummarizationSetBy = User
+
+	column ComponentID
+		dataType: int64
+		formatString: 0
+		lineageTag: d426f3e7-7b8b-4fba-972f-69d9c2d5b31f
+		sourceLineageTag: 948d3be9-2b3c-491f-92ae-5f7b02a92f10
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: ComponentID
+
+		annotation SummarizationSetBy = User
+
+	column SupplierID
+		dataType: int64
+		formatString: 0
+		lineageTag: 595f00ca-7cb5-4fa3-a1dc-cb2d2d215944
+		sourceLineageTag: b2359b16-fc08-4ada-8a21-5c32afd3eaab
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: SupplierID
+
+		annotation SummarizationSetBy = User
+
+	column SupplierLocationID
+		dataType: int64
+		formatString: 0
+		lineageTag: e2dbff40-a585-4f7d-b203-3443d818f44b
+		sourceLineageTag: 2f92b5a0-299a-4902-ae46-986bb57bfd5a
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: SupplierLocationID
+
+		annotation SummarizationSetBy = User
+
+	column QuantityOnHand
+		dataType: int64
+		formatString: 0
+		lineageTag: dc09188d-f579-445d-bb99-5d8a855a0a57
+		sourceLineageTag: d60cc3f0-7f9f-4004-8e70-f950d43deab7
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: QuantityOnHand
+
+		annotation SummarizationSetBy = User
+
+	partition Warehouse = entity
+		mode: directQuery
+		source
+			entityName: Warehouse
+			expressionSource: 'DirectQuery to AS - product_insight'
+

@@ -1,0 +1,86 @@
+table InventoryTransactions
+	lineageTag: 8b6f17fa-d720-469c-b78c-1b856a18485d
+	sourceLineageTag: edde91b5-3d5b-4934-b396-f0eda799d600
+
+	column InventoryTransactionID
+		dataType: int64
+		formatString: 0
+		lineageTag: c2b57097-845e-42d5-8d1b-a19108c116f1
+		sourceLineageTag: 804efc5e-178a-41ce-bf05-10721db1960d
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: InventoryTransactionID
+
+		annotation SummarizationSetBy = User
+
+	column ProductID
+		dataType: int64
+		formatString: 0
+		lineageTag: e4a08acb-5b7b-465d-b8c5-dfe4167a4781
+		sourceLineageTag: 651a6347-f1ca-407b-8be4-a080f3df2b9d
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: ProductID
+
+		annotation SummarizationSetBy = User
+
+	column WarehouseID
+		dataType: int64
+		formatString: 0
+		lineageTag: 32165100-2346-4466-8900-c58da17105c6
+		sourceLineageTag: 1f550d08-e284-4641-b222-e4ed3df1d07e
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: WarehouseID
+
+		annotation SummarizationSetBy = User
+
+	column TransactionType
+		dataType: string
+		lineageTag: 2435d87d-a7fd-4b13-86a9-40858624c9fc
+		sourceLineageTag: bca43f36-08d8-4bea-ada6-dfd1b959f6d6
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: TransactionType
+
+		annotation SummarizationSetBy = User
+
+	column Quantity
+		dataType: int64
+		formatString: 0
+		lineageTag: e9718e19-a789-46cc-adb2-271f0cffd45d
+		sourceLineageTag: f935a37c-795c-465c-ac38-d0ae197bad25
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Quantity
+
+		annotation SummarizationSetBy = User
+
+	column TransactionDate
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 0fcd8474-3fc1-40a2-b7a9-e249a42e7802
+		sourceLineageTag: c88cff22-dd1f-4513-b9ae-3678a78425f2
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: TransactionDate
+
+		annotation SummarizationSetBy = User
+
+	column ReferenceID
+		dataType: int64
+		formatString: 0
+		lineageTag: aa99742e-04b6-43f3-9f37-9cedcb3e60e7
+		sourceLineageTag: bacca285-851b-46e1-bd24-fdd35bde0129
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: ReferenceID
+
+		annotation SummarizationSetBy = User
+
+	partition InventoryTransactions = entity
+		mode: directQuery
+		source
+			entityName: InventoryTransactions
+			expressionSource: 'DirectQuery to AS - product_insight'
+
